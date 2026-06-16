@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; true'",
-    "dev": "cd artifacts/mockup-sandbox && vite dev",
-    "build": "cd artifacts/mockup-sandbox && vite build",
-    "build:dev": "cd artifacts/mockup-sandbox && vite build --mode development",
+    "dev": "cd artifacts/mockup-sandbox && ./node_modules/.bin/vite dev",
+    "build": "cd artifacts/mockup-sandbox && ./node_modules/.bin/vite build",
+    "build:dev": "cd artifacts/mockup-sandbox && ./node_modules/.bin/vite build --mode development",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
